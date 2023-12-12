@@ -1,0 +1,15 @@
+.footer {
+  padding: 20px;
+  font-size: 14px;
+  text-align: center;
+}
+.footer__text {
+  margin: 0;
+}
+.footer__text--link {
+  color: #1a1a1a;
+  text-decoration: none;
+}
+.footer__text--link:hover {
+  color: #1762bc;
+}/*# sourceMappingURL=Footer.css.map */

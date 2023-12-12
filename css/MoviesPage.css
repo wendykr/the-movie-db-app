@@ -1,0 +1,12 @@
+.moviesPage {
+  margin: 0 auto;
+  max-width: 1200px;
+  flex: 1;
+}
+.moviesPage__body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}/*# sourceMappingURL=MoviesPage.css.map */

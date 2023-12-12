@@ -1,0 +1,19 @@
+.footer {
+  padding: 20px;
+  font-size: 14px;
+  text-align: center;
+
+  &__text {
+    margin: 0;
+
+    &--link {
+      color: #1a1a1a;
+      text-decoration: none;
+
+      &:hover {
+        color: #1762bc;
+      }
+    }
+  }
+
+}
