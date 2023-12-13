@@ -1,8 +1,18 @@
 .movie {
   margin: 10px;
   width: 350px;
+  height: 500px;
+  padding: 40px;
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  box-shadow: 2px 2px 7px #dcdcdc;
   display: flex;
   justify-content: center;
+  transition: border 0.3s ease;
+}
+.movie:hover {
+  border: 1px solid #b2b2b2;
+  box-shadow: 2px 2px 16px #dcdcdc;
 }
 .movie__container {
   margin: 0 auto;
@@ -28,7 +38,7 @@
 .movie__title {
   margin: 0;
   margin-top: 10px;
-  font-size: 20px;
+  font-size: 18px;
   color: #2d1f16;
   text-align: center;
 }

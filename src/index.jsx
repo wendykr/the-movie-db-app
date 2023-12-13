@@ -2,9 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App.jsx';
-import './index.css';
+import './index.scss';
 import { MoviesPage } from './pages/MoviesPage/MoviesPage';
 import { MovieDetail } from './components/MovieDetail/MovieDetail';
+import { GenrePage } from './pages/GenrePage/GenrePage';
+import { PersonPage } from './pages/PersonPage/PersonPage';
 import { ErrorPage } from './pages/ErrorPage/ErrorPage';
 
 const router = createBrowserRouter([
@@ -17,8 +19,16 @@ const router = createBrowserRouter([
         element: <MoviesPage />,
       },
       {
-        path: '/movie/:id',
+        path: '/movie/:movieId',
         element: <MovieDetail />,
+      },
+      {
+        path: '/genre/:genreId',
+        element: <GenrePage />,
+      },
+      {
+        path: '/person/:personId',
+        element: <PersonPage />,
       },
       {
         path: '*',

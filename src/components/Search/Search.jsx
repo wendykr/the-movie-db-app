@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import './Search.scss';
+import { FaSearch } from "react-icons/fa";
 
 export const Search = ({ onSearchChange, countMovie }) => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -12,17 +13,17 @@ export const Search = ({ onSearchChange, countMovie }) => {
 
   return (
     <div className="search">
-      Count of displayed movies {countMovie}
+      Počet zobrazených filmů {countMovie}
       <form className="search__form">
-        <label className="search__label" htmlFor="searchInput">Search</label>
         <input
           className="search__input"
           type="text"
           id="searchInput"
           onChange={handleSearch}
           value={searchQuery}
-          placeholder="Enter movie title..."
+          placeholder="Hledej film..."
         />
+        <label className="search__label" htmlFor="searchInput"><FaSearch className="icon-search" /></label>
       </form>
     </div>
   );

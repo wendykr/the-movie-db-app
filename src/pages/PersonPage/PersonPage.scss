@@ -1,0 +1,16 @@
+.personPage {
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  &__image {
+    width: 200px;
+  }
+
+  &__name {
+    margin: 0;
+  }
+}

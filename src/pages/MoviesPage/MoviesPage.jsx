@@ -24,6 +24,7 @@ export const MoviesPage = () => {
         const data = await response.json();
         setInitialMovieList(data.results);
         setFilteredMovieList(data.results);
+        console.log(data.results);
       } catch (error) {
         console.error("Error fetching movies:", error);
       }
@@ -49,20 +50,20 @@ export const MoviesPage = () => {
   const shuffledFilteredMovieList = shuffleArray(filteredMovieList);
 
   return (
-    <div className="moviesPage">
+    <div className="page moviesPage">
       <Search countMovie={shuffledFilteredMovieList.length} onSearchChange={handleSearchChange} />
       <div className="moviesPage__body">
         {
           initialMovieList.length > 0 ? (
             shuffledFilteredMovieList.length === 0 ? (
-              <p>No movies found.</p>
+              <p>Žádné filmy nenalezeny.</p>
             ) : (
               shuffledFilteredMovieList.map((oneMovie, index) => (
                 <Movie oneMovie={oneMovie} key={index} handleMovieClick={handleMovieClick} />
               ))
             )
           ) : (
-            <p>Loading data...</p>
+            <p>Načítám data...</p>
           )
         }
       </div>
