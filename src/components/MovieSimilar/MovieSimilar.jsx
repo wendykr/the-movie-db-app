@@ -11,7 +11,7 @@ export const MovieSimilar = ({ similarMovie, handleSimilarMovieClick }) => {
           src={`https://image.tmdb.org/t/p/w200/${similarMovie.poster_path}`}
           alt={`Poster for ${similarMovie.title}`}
           onError={(e) => {
-            e.target.src = '/public/images/no-image-available.jpg';
+            e.target.src = '/images/no-image-available.jpg';
           }}
         />
       </Link>
