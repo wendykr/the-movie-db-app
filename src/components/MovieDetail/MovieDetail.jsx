@@ -29,7 +29,7 @@ export const MovieDetail = () => {
       setMovie(movieData);
       setGenres(movieData.genres);
 
-      const castsResponse = await fetch(`http://api.themoviedb.org/3/movie/${movieId}/casts?api_key=${apiKey}`);
+      const castsResponse = await fetch(`https://api.themoviedb.org/3/movie/${movieId}/casts?api_key=${apiKey}`);
       const castsData = await castsResponse.json();
       setCasts(castsData.cast);
       console.log('castsData', castsData.cast);
