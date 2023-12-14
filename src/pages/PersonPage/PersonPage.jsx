@@ -5,9 +5,9 @@ import { Button } from '../../components/Button/Button';
 
 export const PersonPage = () => {
   const [person, setPerson] = useState([]);
-
   const { personId } = useParams();
   const apiKey = import.meta.env.VITE_TMDB_API_KEY;
+  const isLocalhost = window.location.href.startsWith('http://localhost') || window.location.href.startsWith('http://127.0.0.1:5173');
 
   useEffect(() => {
     const fetchPerson = async () => {
@@ -35,7 +35,7 @@ export const PersonPage = () => {
           src={`https://image.tmdb.org/t/p/w500/${person.profile_path}`}
           alt={`Photo ${person.name}`}
           onError={(e) => {
-            e.target.src = '/public/images/no-image-available.jpg';
+            e.target.src = isLocalhost ? '/public/images/no-image-available.jpg' : '/images/no-image-available.jpg';
           }}
         />
         <div className="personPage__text">

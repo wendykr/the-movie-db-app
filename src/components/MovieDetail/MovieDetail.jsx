@@ -16,6 +16,7 @@ export const MovieDetail = () => {
   const [videos, setVideos] = useState([]);
   const { movieId } = useParams();
   const apiKey = import.meta.env.VITE_TMDB_API_KEY;
+  const isLocalhost = window.location.href.startsWith('http://localhost') || window.location.href.startsWith('http://127.0.0.1:5173');
 
   useEffect(() => {
     const fetchMovieDetail = async () => {
@@ -74,7 +75,7 @@ export const MovieDetail = () => {
                 src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                 alt={`Poster for ${movie.title}`}
                 onError={(e) => {
-                  e.target.src = '/public/images/no-image-available.jpg';
+                  e.target.src = isLocalhost ? '/public/images/no-image-available.jpg' : '/images/no-image-available.jpg';
                 }}
               />
               <div className="movieDetail__text">
