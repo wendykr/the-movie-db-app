@@ -8,6 +8,7 @@ import { MovieDetail } from './components/MovieDetail/MovieDetail';
 import { GenrePage } from './pages/GenrePage/GenrePage';
 import { PersonPage } from './pages/PersonPage/PersonPage';
 import { ErrorPage } from './pages/ErrorPage/ErrorPage';
+import { SearchProvider } from './context/SearchContext';
 
 const router = createBrowserRouter([
   {
@@ -39,5 +40,7 @@ const router = createBrowserRouter([
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <RouterProvider router={router} />
+  <SearchProvider>
+    <RouterProvider router={router} />
+  </SearchProvider>
 )

@@ -1,12 +1,21 @@
 .genrePage {
 
   &__title {
+    margin-top: 0;
     text-align: center;
+
+    &--category {
+      color: #737373;
+    }
   }
 
   &__list {
     list-style: none;
-    margin: 10px 0;
+    margin: 0.625rem 0;
     padding: 0;
+  }
+
+  &__error {
+    text-align: center;
   }
 }

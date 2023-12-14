@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './GenrePage.scss';
 import { useParams } from 'react-router-dom';
-import { Button } from '../../components/Button/Button';
 
 export const GenrePage = () => {
   const [movies, setMovies] = useState([]);
@@ -48,8 +47,7 @@ export const GenrePage = () => {
   return (
     <div className="page genrePage">
       <div className="container genrePage__container">
-        <Button text="Zpět na seznam" />
-        <h1 className="genrePage__title">Katalog filmů podle žánru - {genreName}</h1>
+        <h1 className="genrePage__title">Katalog filmů podle žánru <span className="genrePage__title--category">{genreName}</span></h1>
         <ul className="genrePage__list">
           {movies.map((movie) => (
             <li className="genrePage__item" key={movie.id}>{movie.title}</li>

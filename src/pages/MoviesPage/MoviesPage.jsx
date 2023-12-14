@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import './MoviesPage.scss';
-import { Search } from '../../components/Search/Search';
 import { Movie } from '../../components/Movie/Movie';
+import { useSearch } from '../../context/SearchContext';
 
 const shuffleArray = (array) => {
   const shuffledArray = array.slice();
@@ -13,9 +13,24 @@ const shuffleArray = (array) => {
 };
 
 export const MoviesPage = () => {
+  const { setCountMovies, setHandleSearchChange } = useSearch();
   const [initialMovieList, setInitialMovieList] = useState([]);
   const [filteredMovieList, setFilteredMovieList] = useState([]);
   const apiKey = import.meta.env.VITE_TMDB_API_KEY;
+
+  const handleSearchChange = useCallback((event) => {
+    const filteredMovies = initialMovieList.filter((oneMovie) =>
+      oneMovie.title.toLowerCase().includes(event.toLowerCase())
+    );
+
+    setFilteredMovieList(filteredMovies);
+    console.log('filteredMovies.length', filteredMovies.length);
+    setCountMovies(filteredMovies.length);
+  }, [initialMovieList, setCountMovies]);
+
+  useEffect(() => {
+    setHandleSearchChange(() => handleSearchChange);
+  }, [handleSearchChange]);
 
   useEffect(() => {
     const fetchMovies = async () => {
@@ -33,14 +48,6 @@ export const MoviesPage = () => {
     fetchMovies();
   }, [apiKey]);
 
-  const handleSearchChange = (event) => {
-    const filteredMovies = initialMovieList.filter((oneMovie) =>
-      oneMovie.title.toLowerCase().includes(event.toLowerCase())
-    );
-
-    setFilteredMovieList(filteredMovies);
-  };
-
   const handleMovieClick = () => {
     setTimeout(() => {
       window.scrollTo(0, 0);
@@ -48,10 +55,10 @@ export const MoviesPage = () => {
   };
 
   const shuffledFilteredMovieList = shuffleArray(filteredMovieList);
+  setCountMovies(shuffledFilteredMovieList.length);
 
   return (
     <div className="page moviesPage">
-      <Search countMovie={shuffledFilteredMovieList.length} onSearchChange={handleSearchChange} />
       <div className="moviesPage__body">
         {
           initialMovieList.length > 0 ? (

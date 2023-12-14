@@ -9,5 +9,5 @@ export const ErrorPage = () => {
       <p className="error__text">Tuto stránku ještě nemám nebo jde o chybný odkaz.</p>
       <Link className="error__link" to="/">Zpět na hlavní stranu</Link>
     </div>
-  )
-}
+  );
+};

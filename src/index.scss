@@ -4,11 +4,11 @@ html { box-sizing: border-box; }
 body {
   margin: 0;
   padding: 0;
-  background-color: #f8f9fa;
+  background-color: #181818;
   font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
   line-height: 1.3;
-  color: #2d1f16;
+  color: #ffffff;
 }
 
 #root {
@@ -19,17 +19,13 @@ body {
 
 .page {
   margin: 0 auto;
-  padding: 40px;
-  width: 480px;
+  padding: 2.5rem;
   height: auto;
-  flex: 1;
   width: 100%;
-  max-width: 1400px;
+  max-width: 87.5rem;
+  flex: 1;
 }
 
 .container {
-  padding: 40px;
-  background-color: #ffffff;
-  border: 1px solid #dcdcdc;
-  box-shadow: 2px 2px 7px #dcdcdc;
+  padding: 2.5rem;
 }

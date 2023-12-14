@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import './PersonPage.scss';
 import { useParams } from 'react-router-dom';
-import { Button } from '../../components/Button/Button';
 
 export const PersonPage = () => {
   const [person, setPerson] = useState([]);
   const { personId } = useParams();
   const apiKey = import.meta.env.VITE_TMDB_API_KEY;
-  const isLocalhost = window.location.href.startsWith('http://localhost') || window.location.href.startsWith('http://127.0.0.1:5173');
+  const isLocalhost = window.location.href.startsWith('http://localhost') || window.location.href.startsWith('http://127.0.0.1');
 
   useEffect(() => {
     const fetchPerson = async () => {
@@ -28,7 +27,6 @@ export const PersonPage = () => {
 
   return (
     <div className="page personPage">
-      <Button text="Zpět na seznam" />
       <div className="container personPage__container">
         <img
           className="personPage__image"
@@ -44,5 +42,5 @@ export const PersonPage = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};

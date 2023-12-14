@@ -5,7 +5,6 @@ import { useParams } from 'react-router-dom';
 import { MovieSimilar } from '../MovieSimilar/MovieSimilar';
 import { MovieVideo } from '../MovieVideo/MovieVideo';
 import Flag from 'react-flagkit';
-import { Button } from '../Button/Button';
 
 export const MovieDetail = () => {
   const [movie, setMovie] = useState(null);
@@ -16,7 +15,7 @@ export const MovieDetail = () => {
   const [videos, setVideos] = useState([]);
   const { movieId } = useParams();
   const apiKey = import.meta.env.VITE_TMDB_API_KEY;
-  const isLocalhost = window.location.href.startsWith('http://localhost') || window.location.href.startsWith('http://127.0.0.1:5173');
+  const isLocalhost = window.location.href.startsWith('http://localhost') || window.location.href.startsWith('http://127.0.0.1');
 
   useEffect(() => {
     const fetchMovieDetail = async () => {
@@ -68,7 +67,6 @@ export const MovieDetail = () => {
       {
         movie ? (
           <div className="container movieDetail__container">
-            <Button text="Zpět na seznam" />
             <div className="movieDetail__body">
               <img
                 className="movieDetail__image"
@@ -108,7 +106,7 @@ export const MovieDetail = () => {
                   ))
                 }
                 </ul>
-                <p><span className="movieDetail__country">{productionCountries}</span> | <span className="movieDetail__year">{releaseYear}</span> | <span className="movieDetail__runtime">{`${movie.runtime} min`}</span></p>
+                <p className="movieDetail__info"><span className="movieDetail__country">{productionCountries}</span> | <span className="movieDetail__year">{releaseYear}</span> | <span className="movieDetail__runtime">{`${movie.runtime} min`}</span></p>
                 <p className="movieDetail__overview">{movie.overview}</p>
                 {displayedCasts.length > 0 && (
                   <p className="movieDetail__cast">Hrají: {" "}
