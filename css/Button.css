@@ -1,0 +1,12 @@
+.button {
+  display: inline-block;
+  margin: 1.25rem 0;
+  padding: 0.625rem 0.9375rem;
+  background-color: #878787;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 2px;
+}
+.button:hover {
+  background-color: #989898;
+}/*# sourceMappingURL=Button.css.map */

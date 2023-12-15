@@ -1,27 +1,7 @@
-.movieDetail {
-  margin: 0 auto;
-  padding: 40px;
-  width: 480px;
-  height: auto;
-  flex: 1;
-}
-@media screen and (min-width: 600px) {
-  .movieDetail {
-    width: auto;
-    max-width: 1200px;
-  }
-}
-.movieDetail__container {
-  padding: 40px;
-  background-color: #ffffff;
-  border: 1px solid #dcdcdc;
-  box-shadow: 2px 2px 7px #dcdcdc;
-  flex: 1;
-}
 .movieDetail__body {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1.25rem;
 }
 @media screen and (min-width: 600px) {
   .movieDetail__body {
@@ -36,7 +16,7 @@
 @media screen and (min-width: 600px) {
   .movieDetail__image {
     width: auto;
-    max-width: 250px;
+    max-width: 15.625rem;
     height: 100%;
   }
 }
@@ -44,52 +24,68 @@
   margin: 0;
 }
 .movieDetail__title--original {
-  font-size: 20px;
+  color: #737373;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+.movieDetail__info {
+  color: #737373;
 }
 @media screen and (min-width: 600px) {
   .movieDetail__text {
     flex: 1;
-    padding: 0 20px 20px 20px;
+    padding: 0 1.25rem 1.25rem 1.25rem;
   }
 }
 .movieDetail__categories {
   list-style: none;
-  margin: 10px 0;
+  margin: 0.625rem 0;
   padding: 0;
 }
 .movieDetail__categories--item {
-  padding: 5px 10px;
-  background-color: #13529e;
-  color: #ffffff;
-  font-size: 14px;
+  padding: 0.3125rem 0.625rem;
+  background-color: #e50914;
+  font-size: 0.875rem;
   display: inline-block;
   border-radius: 3px;
 }
 .movieDetail__categories--item:first-child {
-  margin: 2px 4px 2px 0;
+  margin: 0.125rem 0.25rem 0.125rem 0;
 }
 .movieDetail__categories--item:not(:first-child) {
-  margin: 2px 4px;
+  margin: 0.125rem 0.25rem;
 }
 .movieDetail__categories--item:hover {
-  background-color: #1762bc;
+  background-color: #a4060e;
   cursor: pointer;
 }
-.movieDetail__link {
-  display: inline-block;
-  margin: 20px 0;
-  padding: 10px 15px;
-  background-color: #878787;
+.movieDetail__categories--link {
   color: #ffffff;
   text-decoration: none;
-  border-radius: 2px;
-}
-.movieDetail__link:hover {
-  background-color: #989898;
 }
 .movieDetail__message {
   text-align: center;
 }
 .movieDetail__subtitle {
-  margin: 40px 0 20px 0;
+  margin: 5rem 0 1.25rem 0;
+}
+.movieDetail__cast {
+  color: #737373;
+}
+.movieDetail__cast--list {
+  color: #ffffff;
+  text-decoration: none;
+}
+.movieDetail__cast--item:hover {
+  text-decoration: underline;
+}
+.movieDetail__cast--more {
+  font-size: 0.875rem;
+  color: #e50914;
+  cursor: pointer;
+}
+.movieDetail__cast--more:hover {
+  text-decoration: underline;
 }/*# sourceMappingURL=MovieDetail.css.map */

@@ -1,1 +1,1 @@
-{"version":3,"sources":["../src/pages/MoviesPage/MoviesPage.scss","MoviesPage.css"],"names":[],"mappings":"AAAA;EACE,cAAA;EACA,iBAAA;EACA,OAAA;ACCF;ADCE;EACE,aAAA;EACA,mBAAA;EACA,eAAA;EACA,6BAAA;EACA,mBAAA;ACCJ","file":"MoviesPage.css"}
+{"version":3,"sources":["../src/pages/MoviesPage/MoviesPage.scss","MoviesPage.css"],"names":[],"mappings":"AAEE;EACE,aAAA;EACA,mBAAA;EACA,eAAA;EACA,6BAAA;EACA,mBAAA;ACDJ","file":"MoviesPage.css"}

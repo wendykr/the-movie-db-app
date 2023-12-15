@@ -1,7 +1,13 @@
 .error {
-  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.error__link {
+  color: #ffffff;
+}
+.error__link:hover {
+  color: #e50914;
+  text-decoration: none;
 }/*# sourceMappingURL=ErrorPage.css.map */

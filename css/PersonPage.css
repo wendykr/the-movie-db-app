@@ -1,0 +1,11 @@
+.personPage__container {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+}
+.personPage__image {
+  width: 12.5rem;
+}
+.personPage__name {
+  margin: 0;
+}/*# sourceMappingURL=PersonPage.css.map */

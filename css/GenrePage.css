@@ -1,0 +1,15 @@
+.genrePage__title {
+  margin-top: 0;
+  text-align: center;
+}
+.genrePage__title--category {
+  color: #737373;
+}
+.genrePage__list {
+  list-style: none;
+  margin: 0.625rem 0;
+  padding: 0;
+}
+.genrePage__error {
+  text-align: center;
+}/*# sourceMappingURL=GenrePage.css.map */

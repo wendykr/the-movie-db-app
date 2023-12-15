@@ -2,11 +2,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  gap: 15px;
+  gap: 0.9375rem;
 }
 .similarMovie__image {
-  width: 150px;
-  height: 225px;
+  width: 9.375rem;
+  height: 14.0625rem;
   filter: grayscale(90%);
   transition: filter 0.3s ease;
 }

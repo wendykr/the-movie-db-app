@@ -1,15 +1,17 @@
 .footer {
-  padding: 20px;
-  font-size: 14px;
+  padding: 1.25rem;
+  background-color: #000000;
+  font-size: 0.875rem;
+  color: #737373;
   text-align: center;
 }
 .footer__text {
   margin: 0;
 }
 .footer__text--link {
-  color: #1a1a1a;
+  color: #737373;
   text-decoration: none;
 }
 .footer__text--link:hover {
-  color: #1762bc;
+  color: #e50914;
 }/*# sourceMappingURL=Footer.css.map */

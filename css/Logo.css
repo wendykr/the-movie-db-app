@@ -1,0 +1,11 @@
+.logo {
+  text-decoration: none;
+  transform: scale(1);
+  transition: transform 0.5s ease;
+}
+.logo:hover {
+  transform: scale(1.05);
+}
+.logo__image {
+  width: 15.625rem;
+}/*# sourceMappingURL=Logo.css.map */

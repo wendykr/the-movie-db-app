@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import './Search.scss';
-import { FaSearch } from "react-icons/fa";
+import { IoSearchSharp } from "react-icons/io5";
 import { useSearch } from '../../context/SearchContext';
 import { Logo } from '../Logo/Logo';
 
@@ -33,7 +33,7 @@ export const Search = () => {
                 placeholder="Hledej film..."
               />
               <label className="search__label" htmlFor="searchInput">
-                <FaSearch className="icon-search" />
+                <IoSearchSharp className="icon-search" />
               </label>
             </form>
           )}

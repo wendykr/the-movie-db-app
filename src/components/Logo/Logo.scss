@@ -1,5 +1,11 @@
 .logo {
   text-decoration: none;
+  transform: scale(1);
+  transition: transform 0.5s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 
   &__image {
     width: 15.625rem;
