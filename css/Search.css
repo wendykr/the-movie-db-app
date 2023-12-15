@@ -22,11 +22,11 @@
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  gap: 0.75rem;
+  position: relative;
 }
 .search__input {
   padding: 0.3125rem;
-  width: 12.5rem;
+  width: 100%;
   height: 1.875rem;
   font-size: 1rem;
   border: 1px solid #888888;
@@ -37,20 +37,21 @@
 .search__input:focus-visible {
   outline: none;
   border: 1px solid #e50914;
+  background-color: #181818;
 }
 .search__label {
+  position: absolute;
   padding: 0.1875rem;
-  background-color: #e50914;
   border-radius: 1px;
   display: flex;
   transition: background-color 0.5s ease;
 }
-.search__label:hover {
-  background-color: #a4060e;
-}
 
 .icon-search {
   font-size: 1.5rem;
-  color: #ffffff;
+  color: #888888;
   cursor: pointer;
+}
+.icon-search:hover {
+  color: #ffffff;
 }/*# sourceMappingURL=Search.css.map */
