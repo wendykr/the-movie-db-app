@@ -7,7 +7,7 @@ Zakóduj si v adventu a vyhraj některou z hodnotných cen od partnera Lenovo Th
 
 
 ## Úkol č. 2/4
-Úkolem je vytvořit jednoduchou aplikaci se dvěma hlavními obrazovkami.
+Úkolem je vytvořit jednoduchou filmovou vyhledávací aplikaci se dvěma hlavními obrazovkami.
 
 ## Instrukce
 1. **Obrazovka: vyhledávací:**
