@@ -1,13 +1,22 @@
-import React from 'react';
-import { Outlet } from 'react-router-dom';
-import { Search } from './components/Search/Search';
+import React, { useEffect } from 'react';
+import { Outlet, useLocation } from 'react-router-dom';
+import { useSearch } from './context/SearchContext';
+import { Header } from './components/Header/Header';
 import { Footer } from './components/Footer/Footer';
 
 function App() {
+  const { setSearchQuery } = useSearch();
+
+  const location = useLocation();
+  const path = location.pathname;
+
+  useEffect(() => {
+    setSearchQuery("");
+  }, [path]);
 
   return (
     <>
-      <Search />
+      <Header />
       <Outlet />
       <Footer />
     </>

@@ -37,7 +37,7 @@ export const PersonPage = () => {
           }}
         />
         <div className="personPage__text">
-          <h1 className="personPage__name">{person.name}</h1>
+          <h1 className="personPage__text--name">{person.name}</h1>
           <p>{person.birthday}</p>
         </div>
       </div>

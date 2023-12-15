@@ -24,7 +24,6 @@ export const MoviesPage = () => {
     );
 
     setFilteredMovieList(filteredMovies);
-    console.log('filteredMovies.length', filteredMovies.length);
     setCountMovies(filteredMovies.length);
   }, [initialMovieList, setCountMovies]);
 
@@ -39,7 +38,6 @@ export const MoviesPage = () => {
         const data = await response.json();
         setInitialMovieList(data.results);
         setFilteredMovieList(data.results);
-        console.log(data.results);
       } catch (error) {
         console.error("Error fetching movies:", error);
       }

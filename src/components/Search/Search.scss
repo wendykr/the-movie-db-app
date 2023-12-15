@@ -1,22 +1,4 @@
 .search {
-  background-color: #000000;
-  padding: 0.625rem;
-
-  &__container {
-    margin: 0 auto;
-    padding: 0 2.5rem;
-    max-width: 87.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 0.5rem;
-
-    @media screen and (min-width: 600px) {
-      flex-direction: row;
-    }
-  }
-
   &__form {
     display: flex;
     flex-direction: row;
@@ -24,7 +6,7 @@
     align-items: center;
     position: relative;
   }
-
+  
   &__input {
     padding: 0.3125rem;
     width: 100%;
@@ -41,7 +23,7 @@
       background-color: #181818;
     }
   }
-
+  
   &__label {
     position: absolute;
     padding: 0.1875rem;
@@ -49,14 +31,15 @@
     display: flex;
     transition: background-color 0.5s ease;
   }
-}
-
-.icon-search {
+  }
+  
+  .icon-search {
   font-size: 1.5rem;
   color: #888888;
   cursor: pointer;
-
+  
   &:hover {
     color: #ffffff;
   }
 }
+

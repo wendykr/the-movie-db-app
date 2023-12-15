@@ -19,6 +19,7 @@ export const SearchProvider = ({ children }) => {
       countMovies,
       setCountMovies,
       searchQuery,
+      setSearchQuery,
       onSearchChange,
       handleSearchChange,
       setHandleSearchChange,
