@@ -1,6 +1,6 @@
 # Filmová databáze
 
-Projekt programovací adventní výzvy ReactGirls a Lenovo
+Projekt adventní programovací výzvy ReactGirls a Lenovo
 
 - [Zadání](#zadani)
 - [Minimální požadavky](#minimalni-pozadavky)
